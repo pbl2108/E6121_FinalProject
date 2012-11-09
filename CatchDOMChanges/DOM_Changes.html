@@ -3,13 +3,13 @@
 <head runat="server">
 	<title></title>
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="jQuery/JScript.js" type="text/javascript"></script>
 </head>
 <body onload="onLoad();">
 	<form id="form1" runat="server">
 	<input type="button" onclick="AddHTML(); return false;" value="Modify DOM" />
 	<script type="text/javascript">
-
-	//<![CDATA[
+		//<![CDATA[
 		function $get(id)
 		{
 			return document.getElementById(id);
@@ -21,13 +21,15 @@
 			var span1 = $get("span1");
 			i++;
 			span1.innerHTML = "<div style='color:green;'>DIV inserted with JavaScript i=" + i + "</div>";
+			$get("divRemoved").innerHTML = htmlEncode(document.documentElement.innerHTML);
+
 		}
 
 		function onLoad()
 		{
 			var documentElmenet = document.documentElement;
 			// select the target node
-			var target = $get("span1"); //  documentElmenet; // document.querySelector('#some-id');
+			var target = documentElmenet;//  $get("span1"); //  documentElmenet; // document.querySelector('#some-id');
 
 			// create an observer instance
 			var observer = new MutationObserver(function (mutations)
@@ -51,6 +53,7 @@
 		function onMutation(mutation)
 		{
 			console.log(mutation.type);
+			debugger;
 
 			$get("divAdded").innerHTML = htmlEncode(mutation.addedNodes[0].outerHTML);
 			$get("divRemoved").innerHTML = htmlEncode(mutation.removedNodes[0].outerHTML);
@@ -60,11 +63,14 @@
 		{
 			return $('<div/>').text(value).html();
 		}
-		//]]>
+	//]]>
 	</script>
 	<div>
 	</div>
-	<span id="span1" style="color: Red;"><span>This is the initial content. </span></span>
+	<span id="span1" style="color: Red;">
+		<asp:button text="text" runat="server" onclikc="clikc();" />
+		<span>This is the initial content. </span>
+	</span>
 	<h3>
 		Added HTML
 	</h3>
@@ -75,6 +81,7 @@
 	</h3>
 	<div id="divRemoved" style="color: Red">
 	</div>
+	<embed></embed>
 	</form>
 </body>
 </html>
