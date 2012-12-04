@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://VDomChecker/skin/browserOverlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://VDomChecker/locale/browserOverlay.dtd">
+
+<overlay id="VDomChecker-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://VDomChecker/content/browserOverlay.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="VDomChecker-string-bundle"
+      src="chrome://VDomChecker/locale/browserOverlay.properties" />
+  </stringbundleset>
+  
+  <menubar id="main-menubar">
+    <menu id="VDomChecker-menu" label="&VDomChecker.Menu.label;"
+      accesskey="&VDomChecker.Menu.accesskey;"
+      insertafter="helpMenu">
+      <menupopup>
+        <menuitem id="menu-item"
+          label="&VDomChecker.Menu.label;"
+          accesskey="&VDomChecker.Item.accesskey;"
+          oncommand="VDomCheckerChrome.BrowserOverlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </menubar>
+
+  <vbox id="appmenuSecondaryPane">
+    <menu id="VDomChecker-menu-2" label="&VDomChecker.Menu.label;"
+      accesskey="&VDomChecker.Menu.accesskey;"
+      insertafter="appmenu_addons">
+      <menupopup>
+        <menuitem id="menu-item"
+          label="&VDomChecker.Menu.label;"
+          accesskey="&VDomChecker.Item.accesskey;"
+          oncommand="VDomCheckerChrome.BrowserOverlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </vbox>
+  
+</overlay>

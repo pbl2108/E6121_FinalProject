@@ -65,8 +65,7 @@
 	<span id="span1" style="color: Red;"><span>This is the initial content.
 		<asp:UpdatePanel ID="Updatepanel1" runat="server">
 			<ContentTemplate>
-				<asp:Button ID="Button1" Text="Change Something" runat="server" 
-					onclick="Button1_Click" />
+				<asp:Button ID="Button1" Text="Change Something" runat="server" OnClick="Button1_Click" />
 			</ContentTemplate>
 		</asp:UpdatePanel>
 	</span></span>
