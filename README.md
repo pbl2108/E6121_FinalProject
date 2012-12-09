@@ -10,10 +10,15 @@ https://developer.mozilla.org/en-US/docs/XUL_School/The_Essentials_of_an_Extensi
 
 Memory Leaks:
 http://msdn.microsoft.com/en-us/library/Bb250448
+http://javascript.info/tutorial/memory-leaks
+http://msdn.microsoft.com/en-us/library/dd361842%28v=vs.85%29.aspx
 http://blogs.msdn.com/b/gpde/archive/2009/08/03/javascript-memory-leak-detector-v2.aspx
 http://blogs.telerik.com/blogs/posts/11-04-26/memory-leaks-and-memory-consumption-in-web-applications-part-1.aspx
 http://blogs.telerik.com/blogs/posts/11-05-02/memory-leaks-and-memory-consumption-in-web-applications-part-2.aspx
 http://blogs.telerik.com/blogs/posts/11-05-09/memory-leaks-and-memory-consumption-in-web-applications-part-3.aspx
+
+//How to find leaks in FireFox
+http://stackoverflow.com/questions/5028479/finding-memory-leaks-in-javascript-using-firebug
 
 http://ejohn.org/blog/pure-javascript-html-parser/
 https://developer.mozilla.org/en-US/docs/XUL_School/Intercepting_Page_Loads
