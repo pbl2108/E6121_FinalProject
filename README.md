@@ -9,6 +9,7 @@ https://blog.mozilla.org/addons/2009/01/28/how-to-develop-a-firefox-extension/
 https://developer.mozilla.org/en-US/docs/XUL_School/The_Essentials_of_an_Extension
 
 Memory Leaks:
+--: https://wiki.mozilla.org/Performance%3aLeak_Tools#Common_leak_patterns
 --: http://msdn.microsoft.com/en-us/library/Bb250448
 --: http://javascript.info/tutorial/memory-leaks
 --: http://www.ibm.com/developerworks/web/library/wa-memleak/
