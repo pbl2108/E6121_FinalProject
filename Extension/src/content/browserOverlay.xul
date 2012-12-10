@@ -11,37 +11,22 @@
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <script type="application/x-javascript"
+    src="chrome://VDomChecker/content/HandlersChecker.js" />
+  <script type="application/x-javascript"
     src="chrome://VDomChecker/content/browserOverlay.js" />
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="VDomChecker-string-bundle"
       src="chrome://VDomChecker/locale/browserOverlay.properties" />
   </stringbundleset>
-  
-  <menubar id="main-menubar">
-    <menu id="VDomChecker-menu" label="&VDomChecker.Menu.label;"
-      accesskey="&VDomChecker.Menu.accesskey;"
-      insertafter="helpMenu">
-      <menupopup>
-        <menuitem id="menu-item"
-          label="&VDomChecker.Menu.label;"
-          accesskey="&VDomChecker.Item.accesskey;"
-          oncommand="VDomCheckerChrome.BrowserOverlay.sayHello(event);" />
-      </menupopup>
-    </menu>
-  </menubar>
 
-  <vbox id="appmenuSecondaryPane">
-    <menu id="VDomChecker-menu-2" label="&VDomChecker.Menu.label;"
-      accesskey="&VDomChecker.Menu.accesskey;"
-      insertafter="appmenu_addons">
-      <menupopup>
-        <menuitem id="menu-item"
-          label="&VDomChecker.Menu.label;"
-          accesskey="&VDomChecker.Item.accesskey;"
-          oncommand="VDomCheckerChrome.BrowserOverlay.sayHello(event);" />
-      </menupopup>
-    </menu>
-  </vbox>
+  <hbox>
+    <button id="btnCheck" label="Start Checking for Memory Leaks"
+      oncommand="VDomCheckerChrome.BrowserOverlay.btnClickHandler(event);"/>
+  </hbox>
+  <hbox>
+    <textbox id="txtConsole" multiline="true" width="700px" height="300px" rows="50" cols="1000">
+    </textbox>  
+  </hbox>
   
 </overlay>
