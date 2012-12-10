@@ -46,7 +46,7 @@ VDomCheckerChrome.BrowserOverlay = {
     let message = stringBundle.getString("VDomChecker.greeting.label");
     
     let btnCheck = document.getElementById("btnCheck");
-    btnCheck.label = "Checking for Leaks...";
+    //btnCheck.label = "Checking for Leaks...";
     
     let checker = new VDomCheckerChrome.HandlersChecker();
     checker._createObserver();
