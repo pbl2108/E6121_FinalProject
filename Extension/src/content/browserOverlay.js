@@ -1,3 +1,11 @@
+content.document.getElementById_Original = document.getElementById;
+content.document.getElementById = function(id) {
+  alert(id);
+  return this.getElementById_Original(id);
+}
+
+
+
 /**
  * VDomCheckerChrome namespace.
  */
@@ -6,10 +14,12 @@ if ("undefined" == typeof(VDomCheckerChrome)) {
 };
 
 _loadHandler = function(event) {
+    alert("window Load");
     VDomCheckerChrome.BrowserOverlay._onPageLoad(event);
 };
  
-gBrowser.addEventListener("load", _loadHandler, true);
+window.addEventListener("load", _loadHandler, true);
+//gBrowser.addEventListener("load", _loadHandler, true);
 
 /**
  * Controls the browser overlay for the DOm Checker Extension extension.

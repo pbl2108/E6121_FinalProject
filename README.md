@@ -24,6 +24,9 @@ Memory Leaks:
 //How to find leaks in FireFox
 http://stackoverflow.com/questions/5028479/finding-memory-leaks-in-javascript-using-firebug
 
+//How to find leaks in chrome
+http://gent.ilcore.com/2011/08/finding-memory-leaks.html
+
 http://ejohn.org/blog/pure-javascript-html-parser/
 https://developer.mozilla.org/en-US/docs/XUL_School/Intercepting_Page_Loads
 http://answers.oreilly.com/topic/1634-how-to-attach-objects-and-data-to-dom-with-jquery-data-to-avoid-memory-leak-issues/
